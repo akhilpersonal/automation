@@ -1,20 +1,20 @@
 {
    "cert" :
      {
-       "crt" : "api-cert.pem",
-       "key" : "api-cert.key",
+       "crt" : "<cert>",
+       "key" : "<key>",
        "ca"  : "akamai_ca.pem"
      },
 
    "api" :
      {
-       "host" : "https://track-api.akamai.com/jira/rest/api/2/",
-       "group": "portfolio-create-plan-users",
-       "jql": "project+%3DPAA+AND+Application+%3D+%22Portfolio+For+Jira%22+AND+status+%3D+Open&maxResults=1000&?&fields=id,key,status,reporter"
-     },
+       "host" : "https://jira-staging-api.akamai.com/jira/rest/api/2/",
+       "Portfolio-Access": "portfolio-create-plan-users",
+       "Agent-Access" : "service-desk-agents",
+       "Structure-Plugin-Access" : "structure-users"
+      },
    "myheaders" :
      {
    "Accept": "application/json",
    "Content-Type": "application/json"
      }
-}
