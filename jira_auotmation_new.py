@@ -82,7 +82,7 @@ def post_users_group(issue_keys,user_list,config):
             print("User {} : is already part of the group\n".format(user_list))
             print("Started commenting in ticket {}\n".format(issue_keys))
             payload = json.dumps({"body": "User {} is already have portfolio create plan access."
-                                          "You will be able to create Portfolio from https://jira-staging.akamai.com/jira/secure/PortfolioCreate.jspa".format(user_list)})
+                                          "You will be able to create Portfolio from <url>".format(user_list)})
             comment_issue(config,issue_keys,payload)
     elif response.status_code == 201:
             logging.info("Response {} : User {} added the group successfully".format(response.status_code,user_list))
@@ -90,7 +90,7 @@ def post_users_group(issue_keys,user_list,config):
             print("User {} added to the group".format(user_list))
             print("Started commeting in {}\n".format(issue_keys))
             payload = json.dumps({"body": "Portfolio create permission provided."
-                                          "You will be able to create Portfolio from https://jira-staging.akamai.com/jira/secure/PortfolioCreate.jspa"})
+                                          "You will be able to create Portfolio from <url>"})
             comment_issue(config,issue_keys, payload)
     elif response.status_code == 404:
             logging.error("JSON response {}:"
