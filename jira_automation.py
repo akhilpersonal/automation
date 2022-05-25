@@ -15,7 +15,7 @@ def get_jira_tickets(config):
  components = ['Portfolio-Access', 'Agent-Access', 'Structure-Plugin-Access']
 
  for components in components:
-      jql = "project+%3D+JIRASUP+AND+component+%3D+{0}" \
+      jql = "project+%3D+TEST+AND+component+%3D+{0}" \
             "&maxResults=1000&?&fields=id,key,status,reporter".format(components)
       print ('Starting {0}'.format(components))
       logging.info('Starting {0}'.format(components))
