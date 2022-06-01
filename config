@@ -9,9 +9,9 @@
    "api" :
      {
        "host" : "https://<url>/jira/rest/api/2/",
-       "Portfolio-Access": "portfolio-create-plan-users",
-       "Agent-Access" : "service-desk-agents",
-       "Structure-Plugin-Access" : "structure-users"
+       "Portfolio-Access": "portfolio-access-group",
+       "Agent-Access" : "service-desk-license-group",
+       "Structure-Plugin-Access" : "structure-access-group"
       },
    "myheaders" :
      {
